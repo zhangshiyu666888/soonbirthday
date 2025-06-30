@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>祝你生日快乐</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    .h1 {
+    position: absolute;
+    bottom: 60px; /* 预留按钮空间 */
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    line-height: 40px;
+    }
+
+    .next-button {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background-color: #ff69b4;
+    color: white;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .next-button:hover {
+    background-color: #ff85c1;
+    transform: translateX(-50%) scale(1.1);
+    }
+
+
+
+    .bei {
+      background: url('../img/happy.png') center repeat;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+
+    .h11 {
+      width: 960px;
+      height: 650px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+
+    img {
+      position: absolute;
+      border: 1px solid blanchedalmond;
+      padding: 10px;
+      background-color: white;
+      width: 150px;
+      --angle: 0deg;
+      transform: rotate(var(--angle));
+      transition: transform 0.5s ease;
+    }
+
+    img:hover {
+      transform: rotate(var(--angle)) scale(1.5);
+      z-index: 12;
+      cursor: pointer;
+    }
+
+    img:nth-of-type(1) {
+      --angle: 0deg;
+      left: -120px;
+      top: 100px;
+    }
+
+    img:nth-of-type(2) {
+      --angle: -10deg;
+      left: 35px;
+      top: -20px;
+    }
+
+    img:nth-of-type(3) {
+      --angle: 20deg;
+      left: 156px;
+      top: -30px;
+      z-index: 9;
+    }
+
+    img:nth-of-type(4) {
+      --angle: -10deg;
+      left: 299px;
+      top: -60px;
+      z-index: 3;
+    }
+
+    img:nth-of-type(5) {
+      --angle: 20deg;
+      left: 448px;
+      top: -70px;
+      z-index: 2;
+    }
+
+    img:nth-of-type(6) {
+      --angle: -15deg;
+      left: 559px;
+      top: -80px;
+    }
+
+    img:nth-of-type(7) {
+      --angle: 25deg;
+      left: 630px;
+      top: -90px;
+    }
+
+    img:nth-of-type(8) {
+      --angle: 20deg;
+      left: 740px;
+      top: 80px;
+      z-index: 5;
+    }
+
+    img:nth-of-type(9) {
+      --angle: 0deg;
+      left: 850px;
+      top: 160px;
+      z-index: 4;
+    }
+  </style>
+</head>
+<body>
+  <div class="bei">
+    <div class="h11">
+      <img src="../img/soon5.jpg" alt="">
+      <img src="../img/soon2.jpg" alt="">
+      <img src="../img/soon3.jpg" alt="">
+      <img src="../img/soon4.jpg" alt="">
+      <img src="../img/soon1.jpg" alt="">
+      <img src="../img/soon9.jpg" alt="">
+      <img src="../img/soon7.jpg" alt="">
+      <img src="../img/soon8.jpg" alt="">
+      <img src="../img/soon6.jpg" alt="">
+      <div class="h1">唐生雯生日快乐！</div>
+      <div >点我看看烟花吧！</div>
+      <div class="next-button" onclick="location.href='yanhua.html'">点我看看烟花吧！</div>
+    </div>
+  </div>
+</body>
+</html>
