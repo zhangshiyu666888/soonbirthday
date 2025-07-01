@@ -15,7 +15,6 @@
 // '#countdown 3|hi|祝你|生日快乐|happy birthday||'
 var S = {
   init: function () {
-    var m=0;
     var action = window.location.href,
         i = action.indexOf('?a=');
 
@@ -28,17 +27,18 @@ var S = {
       S.UI.simulate('Hi SOON|祝你|生日快乐|happy birthday|#countdown 3||');
     }
 
+    // ⏰ 用实际时间代替帧计数
+    let startTime = Date.now();
     S.Drawing.loop(function () {
-            m++;
       S.Shape.render();
-      //console.log(m);
-      if(m==2900){
-        window.location.href="../html/BirthdayCake.html";
+      const elapsed = Date.now() - startTime;
+      if (elapsed >= 10500) { // 10.5秒后跳转
+        window.location.href = "../html/BirthdayCake.html";
       }
     });
-
   }
 };
+
 
 
 S.Drawing = (function () {
